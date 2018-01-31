@@ -118,6 +118,7 @@ GameObject:
   - component: {fileID: 132907104}
   - component: {fileID: 132907105}
   - component: {fileID: 132907106}
+  - component: {fileID: 132907107}
   m_Layer: 0
   m_Name: GroundCheck
   m_TagString: Untagged
@@ -164,6 +165,17 @@ BoxCollider2D:
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!114 &132907106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 132907103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13b0d45b37bf55040bb80c129b8d494e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &132907107
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -273,9 +285,11 @@ GameObject:
   - component: {fileID: 2126644424}
   - component: {fileID: 2126644423}
   - component: {fileID: 2126644425}
-  - component: {fileID: 2126644426}
   - component: {fileID: 2126644428}
+  - component: {fileID: 2126644426}
   - component: {fileID: 2126644427}
+  - component: {fileID: 2126644429}
+  - component: {fileID: 2126644430}
   m_Layer: 0
   m_Name: YeOldyKnifeGuy_0_0
   m_TagString: Untagged
@@ -332,7 +346,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2126644422}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.3179035, y: 1.84, z: 0}
+  m_LocalPosition: {x: -10.3179035, y: 1.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 132907104}
@@ -407,7 +421,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.8888889
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -415,4 +429,34 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
+--- !u!114 &2126644429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2126644422}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71daa6710a30899438d377234cf3ef71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxSpeed: 3
+  speed: 50
+  jumpPower: 20
+  grounded: 0
+--- !u!114 &2126644430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2126644422}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71daa6710a30899438d377234cf3ef71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxSpeed: 3
+  speed: 50
+  jumpPower: 150
+  grounded: 0

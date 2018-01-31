@@ -8,7 +8,8 @@ public class Player : MonoBehaviour
 {
 	public float maxSpeed = 3;
 	public float speed = 50f;
-	public float jumpPower = 150f; public bool grounded;
+	public float jumpPower = 50f;
+	public bool grounded;
 	private Rigidbody2D rb2d;
 	private Animator anim;
 	void Start() {
@@ -24,7 +25,14 @@ public class Player : MonoBehaviour
 		if (Input.GetAxis("Horizontal") > 0.1f) {
 			transform.localScale = new Vector3(1, 1, 1);
 		}
+		if (Input.GetButtonDown("Jump") && grounded)
+		{
+			rb2d.AddForce(Vector2.up * jumpPower);
+
+		}
 	}
+
+
 	void FixedUpdate()
 	{
 		float h = Input.GetAxis("Horizontal"); // Moving the player 
